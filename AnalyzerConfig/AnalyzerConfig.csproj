@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+
+		<!-- Project -->
+		<OutputType>None</OutputType>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<IncludeBuildOutput>false</IncludeBuildOutput>
+		<NoDefaultExcludes>true</NoDefaultExcludes>
+
+		<NoWarn>$(NoWarn);NU5128</NoWarn>
+
+		<!-- NuGet -->
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageId>Snowyyd.AnalyzerConfig</PackageId>
+		<Version>1.0.0</Version>
+		<Authors>snowyyd</Authors>
+
+		<!-- Misc -->
+		<ErrorReport>none</ErrorReport>
+
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="$(SolutionDir)/Snowyyd.AnalyzerConfig.globalconfig" Pack="true" PackagePath="build" />
+		<None Include="$(SolutionDir)/Snowyyd.AnalyzerConfig.props" Pack="true" PackagePath="build" />
+		<None Include="$(SolutionDir)/.editorconfig" Pack="true" PackagePath="build/Snowyyd.AnalyzerConfig.editorconfig" />
+	</ItemGroup>
+
+</Project>

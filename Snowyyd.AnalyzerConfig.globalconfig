@@ -1,0 +1,148 @@
+is_global = true
+
+# --------------------------------
+# Qualification
+# --------------------------------
+# severity levels: https://learn.microsoft.com/en-us/visualstudio/code-quality/use-roslyn-analyzers?view=vs-2022#severity-levels
+dotnet_style_qualification_for_field = true:error
+dotnet_style_qualification_for_property = true:error
+dotnet_style_qualification_for_method = true:error
+dotnet_style_qualification_for_event = true:error
+
+# --------------------------------
+# Naming Styles
+# --------------------------------
+
+# PascalCase
+dotnet_naming_style.pascal_case.capitalization = pascal_case
+
+# camelCase
+dotnet_naming_style.camel_case.capitalization = camel_case
+
+# _camelCase
+dotnet_naming_style.underscore_camel_case.required_prefix = _
+dotnet_naming_style.underscore_camel_case.capitalization = camel_case
+
+# s_camelCase
+# dotnet_naming_style.static_camel_case.required_prefix = s_
+dotnet_naming_style.static_camel_case.capitalization = camel_case
+
+# t_camelCase
+# dotnet_naming_style.thread_static_camel_case.required_prefix = t_
+# dotnet_naming_style.thread_static_camel_case.capitalization = camel_case
+
+# --------------------------------
+# Symbol Groups
+# --------------------------------
+
+# Fields
+dotnet_naming_symbols.all_fields.applicable_kinds = field
+
+# Private fields
+dotnet_naming_symbols.private_fields.applicable_kinds = field
+dotnet_naming_symbols.private_fields.applicable_accessibilities = private
+
+# Static private fields
+dotnet_naming_symbols.static_fields.applicable_kinds = field
+dotnet_naming_symbols.static_fields.applicable_accessibilities = private
+dotnet_naming_symbols.static_fields.required_modifiers = static
+
+# ThreadStatic fields
+dotnet_naming_symbols.thread_static_fields.applicable_kinds = field
+dotnet_naming_symbols.thread_static_fields.required_modifiers = static
+dotnet_naming_symbols.thread_static_fields.required_attributes = ThreadStatic
+
+# Properties
+dotnet_naming_symbols.all_properties.applicable_kinds = property
+
+# Methods
+dotnet_naming_symbols.all_methods.applicable_kinds = method
+
+# Parameters
+dotnet_naming_symbols.all_parameters.applicable_kinds = parameter
+
+# Local variables
+dotnet_naming_symbols.all_locals.applicable_kinds = local
+
+# Types (class, struct, interface, enum, delegate)
+dotnet_naming_symbols.all_types.applicable_kinds = class, struct, interface, enum, delegate
+
+# Namespaces
+dotnet_naming_symbols.all_namespaces.applicable_kinds = namespace
+
+# --------------------------------
+# Naming Rules
+# --------------------------------
+
+# All fields
+# dotnet_naming_rule.fields_should_be_pascal_case.symbols = all_fields
+# dotnet_naming_rule.fields_should_be_pascal_case.style = pascal_case
+# dotnet_naming_rule.fields_should_be_pascal_case.severity = error
+
+# Public fields
+dotnet_naming_rule.public_fields_should_be_pascal_case.symbols = all_fields
+dotnet_naming_rule.public_fields_should_be_pascal_case.style = pascal_case
+dotnet_naming_rule.public_fields_should_be_pascal_case.severity = error
+dotnet_naming_rule.public_fields_should_be_pascal_case.applicable_accessibilities = public
+
+# Private fields
+dotnet_naming_rule.private_fields_should_be_underscore_camel.symbols = private_fields
+dotnet_naming_rule.private_fields_should_be_underscore_camel.style = underscore_camel_case
+dotnet_naming_rule.private_fields_should_be_underscore_camel.severity = error
+
+# Static fields
+# dotnet_naming_rule.static_fields_should_be_s_camel_case.symbols = static_fields
+# dotnet_naming_rule.static_fields_should_be_s_camel_case.style = static_camel_case
+# dotnet_naming_rule.static_fields_should_be_s_camel_case.severity = error
+dotnet_naming_rule.static_fields_should_be_pascal_case.symbols = static_fields
+dotnet_naming_rule.static_fields_should_be_pascal_case.style = pascal_case
+dotnet_naming_rule.static_fields_should_be_pascal_case.severity = error
+
+# Thread Static fields
+# dotnet_naming_rule.thread_static_fields_should_be_t_camel_case.symbols = thread_static_fields
+# dotnet_naming_rule.thread_static_fields_should_be_t_camel_case.style = thread_static_camel_case
+# dotnet_naming_rule.thread_static_fields_should_be_t_camel_case.severity = error
+
+# Properties
+dotnet_naming_rule.properties_should_be_pascal_case.symbols = all_properties
+dotnet_naming_rule.properties_should_be_pascal_case.style = pascal_case
+dotnet_naming_rule.properties_should_be_pascal_case.severity = error
+
+# Methods
+dotnet_naming_rule.methods_should_be_pascal_case.symbols = all_methods
+dotnet_naming_rule.methods_should_be_pascal_case.style = pascal_case
+dotnet_naming_rule.methods_should_be_pascal_case.severity = error
+
+# Parameters
+dotnet_naming_rule.parameters_should_be_camel_case.symbols = all_parameters
+dotnet_naming_rule.parameters_should_be_camel_case.style = camel_case
+dotnet_naming_rule.parameters_should_be_camel_case.severity = error
+
+# Local variables
+dotnet_naming_rule.locals_should_be_camel_case.symbols = all_locals
+dotnet_naming_rule.locals_should_be_camel_case.style = camel_case
+dotnet_naming_rule.locals_should_be_camel_case.severity = error
+
+# Types
+dotnet_naming_rule.types_should_be_pascal_case.symbols = all_types
+dotnet_naming_rule.types_should_be_pascal_case.style = pascal_case
+dotnet_naming_rule.types_should_be_pascal_case.severity = error
+
+# Namespaces
+dotnet_naming_rule.namespaces_should_be_pascal_case.symbols = all_namespaces
+dotnet_naming_rule.namespaces_should_be_pascal_case.style = pascal_case
+dotnet_naming_rule.namespaces_should_be_pascal_case.severity = error
+
+# --------------------------------
+# Other rules
+# https://docs.godotengine.org/en/stable/tutorials/scripting/c_sharp/c_sharp_style_guide.html
+# --------------------------------
+
+# Use explicit access modifiers
+dotnet_style_require_accessibility_modifiers = always:error
+
+# Sort usings
+dotnet_sort_system_directives_first = true
+
+# Parenthesis
+dotnet_style_parentheses_in_arithmetic_binary_operators = always_for_clarity:suggestion
