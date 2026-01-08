@@ -13,7 +13,7 @@
 		<!-- NuGet -->
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageId>Snowyyd.AnalyzerConfig</PackageId>
-		<Version>1.0.0</Version>
+		<Version>1.0.1</Version>
 		<Authors>snowyyd</Authors>
 
 		<!-- Misc -->
