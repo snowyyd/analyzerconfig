@@ -13,8 +13,10 @@
 		<!-- NuGet -->
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageId>Snowyyd.AnalyzerConfig</PackageId>
-		<Version>1.0.2</Version>
+		<Version>1.0.3</Version>
 		<Authors>snowyyd</Authors>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<RepositoryUrl>https://github.com/snowyyd/analyzerconfig.git</RepositoryUrl>
 
 		<!-- Misc -->
 		<ErrorReport>none</ErrorReport>
