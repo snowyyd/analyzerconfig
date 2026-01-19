@@ -93,7 +93,7 @@ dotnet_naming_rule.namespaces_should_be_pascal_case.severity = error
 # https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/
 # --------------------------------
 
-csharp_prefer_braces = when_multiline
+csharp_prefer_braces = false
 csharp_prefer_simple_default_expression = true:error
 csharp_prefer_static_local_function = true:warning
 csharp_preferred_modifier_order = public,protected,private,internal,file,static,extern,new,virtual,abstract,sealed,override,readonly,unsafe,required,volatile,async:error
