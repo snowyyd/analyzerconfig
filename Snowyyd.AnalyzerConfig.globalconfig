@@ -89,13 +89,17 @@ dotnet_naming_rule.namespaces_should_be_pascal_case.severity = error
 # --------------------------------
 # Style rules
 # https://learn.microsoft.com/en-us/visualstudio/code-quality/use-roslyn-analyzers#severity-levels
+# https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/code-style-rule-options
+# https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/
 # --------------------------------
 
+csharp_prefer_braces = when_multiline
 csharp_prefer_simple_default_expression = true:error
 csharp_prefer_static_local_function = true:warning
 csharp_preferred_modifier_order = public,protected,private,internal,file,static,extern,new,virtual,abstract,sealed,override,readonly,unsafe,required,volatile,async:error
 csharp_style_conditional_delegate_call = true:warning
 csharp_style_deconstructed_variable_declaration = true:suggestion
+csharp_style_expression_bodied_methods = when_on_single_line
 csharp_style_implicit_object_creation_when_type_is_apparent = true:suggestion
 csharp_style_inlined_variable_declaration = true:suggestion
 csharp_style_namespace_declarations = file_scoped:warning
