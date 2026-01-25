@@ -158,3 +158,5 @@ dotnet_diagnostic.IDE0052.severity = suggestion # Remove unread private member
 dotnet_diagnostic.IDE0070.severity = suggestion # Use System.HashCode.Combine
 dotnet_diagnostic.IDE0072.severity = suggestion # Add missing cases to switch expression
 dotnet_diagnostic.IDE0082.severity = suggestion # Convert typeof to nameof
+
+dotnet_diagnostic.CS1591.severity = none # Missing XML comment for publicly visible type or member 'Type_or_Member'
