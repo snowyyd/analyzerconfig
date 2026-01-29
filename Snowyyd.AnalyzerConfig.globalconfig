@@ -160,3 +160,11 @@ dotnet_diagnostic.IDE0072.severity = suggestion # Add missing cases to switch ex
 dotnet_diagnostic.IDE0082.severity = suggestion # Convert typeof to nameof
 
 dotnet_diagnostic.CS1591.severity = none # Missing XML comment for publicly visible type or member 'Type_or_Member'
+
+# --------------------------------
+# Roslynator
+# --------------------------------
+dotnet_analyzer_diagnostic.category-roslynator.severity = none
+
+dotnet_diagnostic.rcs1260.severity = error
+roslynator_trailing_comma_style = omit_when_single_line
