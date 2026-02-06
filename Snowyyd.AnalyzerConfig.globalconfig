@@ -164,3 +164,23 @@ dotnet_diagnostic.IDE1006.severity = error      # Naming rule violation
 
 # https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/
 dotnet_diagnostic.CS1591.severity = none # Missing XML comment for publicly visible type or member 'Type_or_Member'
+
+# --------------------------------
+# Roslynator
+# --------------------------------
+# dotnet_analyzer_diagnostic.category-roslynator.severity = none
+
+dotnet_diagnostic.RCS1003.severity = none # Add braces to if-else (when expression spans over multiple lines)
+dotnet_diagnostic.RCS1058.severity = none # Use compound assignment (same as IDE0054)
+dotnet_diagnostic.RCS1085.severity = none # Use auto-implemented property (same as IDE0032)
+dotnet_diagnostic.RCS1124.severity = none # Inline local variable
+dotnet_diagnostic.RCS1161.severity = none # Enum should declare explicit values
+dotnet_diagnostic.RCS1163.severity = none # Unused parameter (same as IDE0060)
+dotnet_diagnostic.RCS1169.severity = none # Make field read-only (same as IDE0044)
+dotnet_diagnostic.RCS1181.severity = none # Convert comment to documentation comment
+dotnet_diagnostic.RCS1206.severity = none # Use conditional access instead of conditional expression (same as IDE0031)
+dotnet_diagnostic.RCS1213.severity = none # Remove unused member declaration (same as IDE0051)
+dotnet_diagnostic.RCS1221.severity = none # Use pattern matching instead of combination of 'as' operator and null check (same as IDE0019)
+
+dotnet_diagnostic.RCS1260.severity = error # Add/remove trailing comm
+roslynator_trailing_comma_style = omit_when_single_line
