@@ -1,9 +1,9 @@
 is_global = true
 
-# --------------------------------
+# --------------------------------------------------------------------------------------------------------------------------------
 # Naming Styles
 # https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/naming-rules#naming-style-properties
-# --------------------------------
+# --------------------------------------------------------------------------------------------------------------------------------
 
 # PascalCase
 dotnet_naming_style.pascal_case.capitalization = pascal_case
@@ -11,9 +11,9 @@ dotnet_naming_style.pascal_case.capitalization = pascal_case
 # camelCase
 dotnet_naming_style.camel_case.capitalization = camel_case
 
-# --------------------------------
+# --------------------------------------------------------------------------------------------------------------------------------
 # Symbol Groups
-# --------------------------------
+# --------------------------------------------------------------------------------------------------------------------------------
 
 # Fields
 dotnet_naming_symbols.all_fields.applicable_kinds = field
@@ -40,10 +40,10 @@ dotnet_naming_symbols.all_types.applicable_kinds = class, struct, interface, enu
 # Namespaces
 dotnet_naming_symbols.all_namespaces.applicable_kinds = namespace
 
-# --------------------------------
+# --------------------------------------------------------------------------------------------------------------------------------
 # Naming Rules
 # https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/naming-rules#naming-rule-properties
-# --------------------------------
+# --------------------------------------------------------------------------------------------------------------------------------
 
 # Public fields
 dotnet_naming_rule.public_fields_should_be_pascal_case.symbols = all_fields
@@ -86,12 +86,12 @@ dotnet_naming_rule.namespaces_should_be_pascal_case.symbols = all_namespaces
 dotnet_naming_rule.namespaces_should_be_pascal_case.style = pascal_case
 dotnet_naming_rule.namespaces_should_be_pascal_case.severity = error
 
-# --------------------------------
+# --------------------------------------------------------------------------------------------------------------------------------
 # Style rules
 # https://learn.microsoft.com/en-us/visualstudio/code-quality/use-roslyn-analyzers#severity-levels
 # https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/code-style-rule-options
 # https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/
-# --------------------------------
+# --------------------------------------------------------------------------------------------------------------------------------
 
 csharp_prefer_braces = false
 csharp_prefer_simple_default_expression = true:error
@@ -141,10 +141,10 @@ dotnet_style_qualification_for_property = true:error
 dotnet_style_readonly_field = true:warning
 dotnet_style_require_accessibility_modifiers = for_non_interface_members:error
 
-# --------------------------------
+# --------------------------------------------------------------------------------------------------------------------------------
 # .NET Diagnostic
 # https://github.com/dotnet/docs/tree/main/docs/fundamentals/code-analysis/style-rules
-# --------------------------------
+# --------------------------------------------------------------------------------------------------------------------------------
 
 # https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/language-rules
 dotnet_diagnostic.IDE0001.severity = error      # Simplify name
@@ -165,11 +165,13 @@ dotnet_diagnostic.IDE1006.severity = error      # Naming rule violation
 # https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/
 dotnet_diagnostic.CS1591.severity = none # Missing XML comment for publicly visible type or member 'Type_or_Member'
 
-# --------------------------------
-# Roslynator
-# --------------------------------
+# --------------------------------------------------------------------------------------------------------------------------------
+# Roslynator Analyzers
+# https://josefpihrt.github.io/docs/roslynator/analyzers
+# --------------------------------------------------------------------------------------------------------------------------------
 # dotnet_analyzer_diagnostic.category-roslynator.severity = none
 
+# Common Analyzers
 dotnet_diagnostic.RCS1003.severity = none # Add braces to if-else (when expression spans over multiple lines)
 dotnet_diagnostic.RCS1058.severity = none # Use compound assignment (same as IDE0054)
 dotnet_diagnostic.RCS1085.severity = none # Use auto-implemented property (same as IDE0032)
@@ -181,6 +183,41 @@ dotnet_diagnostic.RCS1181.severity = none # Convert comment to documentation com
 dotnet_diagnostic.RCS1206.severity = none # Use conditional access instead of conditional expression (same as IDE0031)
 dotnet_diagnostic.RCS1213.severity = none # Remove unused member declaration (same as IDE0051)
 dotnet_diagnostic.RCS1221.severity = none # Use pattern matching instead of combination of 'as' operator and null check (same as IDE0019)
-
 dotnet_diagnostic.RCS1260.severity = error # Add/remove trailing comm
-roslynator_trailing_comma_style = omit_when_single_line
+
+roslynator_trailing_comma_style = omit_when_single_line # RCS1260
+
+# Formatting Analyzers
+dotnet_diagnostic.RCS0001.severity = error # Add blank line after embedded statement
+dotnet_diagnostic.RCS0002.severity = error # Add blank line after #region
+dotnet_diagnostic.RCS0003.severity = error # Add blank line after using directive list
+dotnet_diagnostic.RCS0005.severity = error # Add blank line before #endregion
+dotnet_diagnostic.RCS0006.severity = error # Add blank line before using directive list
+dotnet_diagnostic.RCS0007.severity = error # Add blank line between accessors
+dotnet_diagnostic.RCS0008.severity = error # Add blank line between closing brace and next statement
+dotnet_diagnostic.RCS0009.severity = error # Add blank line between declaration and documentation comment
+dotnet_diagnostic.RCS0025.severity = error # Put full accessor on its own line
+dotnet_diagnostic.RCS0027.severity = error # Place new line after/before binary operator
+dotnet_diagnostic.RCS0028.severity = error # Place new line after/before '?:' operator
+dotnet_diagnostic.RCS0032.severity = error # Place new line after/before arrow token
+dotnet_diagnostic.RCS0033.severity = error # Put statement on its own line
+dotnet_diagnostic.RCS0039.severity = error # Remove new line before base list
+dotnet_diagnostic.RCS0041.severity = error # Remove new line between 'if' keyword and 'else' keyword
+dotnet_diagnostic.RCS0042.severity = error # Put auto-accessors on a single line
+dotnet_diagnostic.RCS0045.severity = error # Use linefeed as new line
+dotnet_diagnostic.RCS0049.severity = error # Add blank line after top comment
+dotnet_diagnostic.RCS0050.severity = error # Add blank line before top declaration
+dotnet_diagnostic.RCS0052.severity = error # Place new line after/before equals token
+dotnet_diagnostic.RCS0054.severity = error # Fix formatting of a call chain
+dotnet_diagnostic.RCS0055.severity = error # Fix formatting of a binary expression chain
+dotnet_diagnostic.RCS0057.severity = error # Normalize whitespace at the beginning of a file
+dotnet_diagnostic.RCS0058.severity = error # Normalize whitespace at the end of a file
+dotnet_diagnostic.RCS0059.severity = error # Place new line after/before null-conditional operator
+dotnet_diagnostic.RCS0063.severity = error # Remove unnecessary blank line
+
+roslynator_arrow_token_new_line = after # RCS0032
+roslynator_binary_operator_new_line = before # RCS0027
+roslynator_conditional_operator_new_line = before # RCS0028
+roslynator_equals_token_new_line = after # RCS0052
+roslynator_new_line_at_end_of_file = true # RCS0058
+roslynator_null_conditional_operator_new_line = after # RCS0059
