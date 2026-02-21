@@ -18,7 +18,7 @@ if [[ ! -f "$ENV_FILE" ]]; then
   exit 1
 fi
 
-echo -e "${CYAN}Loading ${GREEN}${ENV_FILE}${RESET}"
+echo -e "${GREEN}Loading ${YELLOW}${ENV_FILE}${RESET}"
 set -a
 source $ENV_FILE
 set +a
@@ -28,7 +28,6 @@ if [[ -z "$CSPROJ_FILE" ]]; then
   echo -e "${YELLOW}No .csproj file found in ${GREEN}${PROJECT_DIR}${RESET}"
   exit 1
 fi
-
 echo -e "${CYAN}Found .csproj file: ${GREEN}${CSPROJ_FILE}${RESET}"
 
 VERSION=$(grep -oP '(?<=<Version>)(.*)(?=</Version>)' "$CSPROJ_FILE")
@@ -36,19 +35,25 @@ if [[ -z "$VERSION" ]]; then
   echo -e "${YELLOW}Version not found in .csproj file! Please set the version manually.${RESET}"
   exit 1
 fi
-
 echo -e "${CYAN}Found version: ${GREEN}${VERSION}${RESET}"
 
-echo -e "${CYAN}Packing NuGet${RESET}"
+PACKAGE_ID=$(grep -oP '(?<=<PackageId>)(.*)(?=</PackageId>)' "$CSPROJ_FILE")
+if [[ -z "$PACKAGE_ID" ]]; then
+  echo -e "${YELLOW}PackageId not found in .csproj file!${RESET}"
+  exit 1
+fi
+echo -e "${CYAN}Found PackageId: ${GREEN}${PACKAGE_ID}${RESET}"
+
+echo -e "${GREEN}Packing NuGet${RESET}"
 dotnet pack -c Release
 
-NUPKG_PATH="$PROJECT_DIR/build/bin/Release/Snowyyd.AnalyzerConfig.$VERSION.nupkg"
+NUPKG_PATH="$PROJECT_DIR/build/bin/Release/$PACKAGE_ID.$VERSION.nupkg"
 if [[ -z "$NUPKG_PATH" ]]; then
   echo -e "${YELLOW}.nupkg not found in ${GREEN}${NUPKG_PATH}${RESET}"
   exit 1
 fi
 
-echo -e "${CYAN}Pushing NuGet package to GitLab: ${GREEN}${NUPKG_PATH}${RESET}"
+echo -e "${GREEN}Pushing NuGet package to GitLab: ${YELLOW}${NUPKG_PATH}${RESET}"
 dotnet nuget push "$NUPKG_PATH" --source gitlab
 
 echo -e "${YELLOW}Done!${RESET}"
