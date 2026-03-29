@@ -7,3 +7,6 @@ insert_final_newline = true
 indent_style = tab
 indent_size = 4
 trim_trailing_whitespace = true
+
+[**/obj/**/*.cs]
+dotnet_diagnostic.RCS0045.severity = none # Use linefeed as new line
