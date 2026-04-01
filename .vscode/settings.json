@@ -1,6 +1,6 @@
 {
-	"[csharp]": {
-		"files.insertFinalNewline": true,
-	},
-	"editor.inlineSuggest.enabled": false
+  "[csharp]": {
+    "files.insertFinalNewline": true,
+  },
+  "editor.inlineSuggest.enabled": false
 }

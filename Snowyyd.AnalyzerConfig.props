@@ -1,5 +1,5 @@
 <Project>
-	<ItemGroup>
-		<GlobalAnalyzerConfigFiles Include="$(MSBuildThisFileDirectory)Snowyyd.AnalyzerConfig.globalconfig" />
-	</ItemGroup>
+  <ItemGroup>
+    <GlobalAnalyzerConfigFiles Include="$(MSBuildThisFileDirectory)Snowyyd.AnalyzerConfig.globalconfig" />
+  </ItemGroup>
 </Project>
