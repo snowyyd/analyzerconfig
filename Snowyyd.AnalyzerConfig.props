@@ -2,4 +2,8 @@
   <ItemGroup>
     <GlobalAnalyzerConfigFiles Include="$(MSBuildThisFileDirectory)Snowyyd.AnalyzerConfig.globalconfig" />
   </ItemGroup>
+
+  <ItemGroup Condition="'$(AnalyzerExplicitGlobalization)' == 'true'">
+    <GlobalAnalyzerConfigFiles Include="$(MSBuildThisFileDirectory)Snowyyd.AnalyzerConfig.Globalization.globalconfig" />
+  </ItemGroup>
 </Project>
