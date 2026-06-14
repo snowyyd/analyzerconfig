@@ -189,6 +189,9 @@ dotnet_diagnostic.IDE1006.severity = error      # Naming rule violation
 # https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/
 dotnet_diagnostic.CS1591.severity = none # Missing XML comment for publicly visible type or member 'Type_or_Member'
 
+# https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/
+dotnet_diagnostic.CA1707.severity = none # Identifiers should not contain underscores
+
 # --------------------------------------------------------------------------------------------------------------------------------
 # Roslynator Analyzers
 # https://josefpihrt.github.io/docs/roslynator/analyzers
