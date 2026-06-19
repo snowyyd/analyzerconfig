@@ -210,7 +210,8 @@ dotnet_diagnostic.RCS1181.severity = none # Convert comment to documentation com
 dotnet_diagnostic.RCS1206.severity = none # Use conditional access instead of conditional expression (same as IDE0031)
 dotnet_diagnostic.RCS1213.severity = none # Remove unused member declaration (same as IDE0051)
 dotnet_diagnostic.RCS1221.severity = none # Use pattern matching instead of combination of 'as' operator and null check (same as IDE0019)
-dotnet_diagnostic.RCS1260.severity = error # Add/remove trailing comm
+dotnet_diagnostic.RCS1238.severity = none # Avoid nested ?: operators
+dotnet_diagnostic.RCS1260.severity = error # Add/remove trailing comma
 
 roslynator_trailing_comma_style = omit_when_single_line # RCS1260
 
