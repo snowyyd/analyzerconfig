@@ -8,7 +8,7 @@
 
     <!-- Metadata -->
     <PackageId>Snowyyd.AnalyzerConfig</PackageId>
-    <Version>3.1.4</Version>
+    <Version>3.1.5</Version>
     <Authors>snowyyd</Authors>
     <Description>Snowyyd's SDK for .NET projects</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
